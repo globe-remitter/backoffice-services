@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.gr</groupId>
     <artifactId>backoffice-services</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
     <name>backoffice-services</name>
     <description>backoffice-services project for Spring Boot</description>
@@ -51,8 +51,8 @@
 
     <modules>
         <module>gr-backoffice-common</module>
-        <module>gr-backoffice-server</module>
         <module>gr-backoffice-data</module>
         <module>gr-account-service</module>
+        <module>gr-backoffice-server</module>
     </modules>
 </project>
