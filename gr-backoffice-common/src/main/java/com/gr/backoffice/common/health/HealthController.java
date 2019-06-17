@@ -18,7 +18,7 @@ import com.gr.backoffice.common.exception.GlobeRemitterException;
 @RequestMapping
 public class HealthController {
 	
-	@GetMapping("/active")
+	@GetMapping("/health")
 	public Map<String,String> isActive()
 	{
 		Map<String,String> activeMap = new LinkedHashMap<>();

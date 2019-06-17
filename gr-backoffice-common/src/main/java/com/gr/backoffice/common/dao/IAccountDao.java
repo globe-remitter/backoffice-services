@@ -1,13 +1,13 @@
 package com.gr.backoffice.common.dao;
 
-import com.gr.backoffice.common.entity.Account;
+import com.gr.backoffice.common.entity.DummyAccount;
 
 import java.util.List;
 
 public interface IAccountDao {
-    public Account save(Account account);
-    public Account get(Integer id);
-    public List<Account> getAllAccounts();
-    public int update(Account account);
+    public DummyAccount save(DummyAccount dummyAccount);
+    public DummyAccount get(Integer id);
+    public List<DummyAccount> getAllAccounts();
+    public int update(DummyAccount dummyAccount);
     public int delete(Integer id);
 }

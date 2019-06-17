@@ -2,7 +2,7 @@ package com.gr.account.service.dao.impl;
 
 import com.gr.account.service.dao.mapper.AccountRowMapper;
 import com.gr.backoffice.common.dao.IAccountDao;
-import com.gr.backoffice.common.entity.Account;
+import com.gr.backoffice.common.entity.DummyAccount;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
@@ -21,12 +21,12 @@ public class AccountDaoImpl extends AbstractDaoImpl implements IAccountDao {
     private static final String UPDATE_ACCOUNT_NAME = "UPDATE " + TBL_NAME + " SET ACCOUNT_NAME = ? WHERE ID = ?";
 
     @Override
-    public Account save(Account account) {
+    public DummyAccount save(DummyAccount dummyAccount) {
         KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemplate.update(connection -> {
             PreparedStatement ps = connection
                     .prepareStatement(INSERT, new String[]{"ID"});
-            ps.setString(1, account.getAccountName());
+            ps.setString(1, dummyAccount.getAccountName());
             return ps;
         }, keyHolder);
 
@@ -41,12 +41,12 @@ public class AccountDaoImpl extends AbstractDaoImpl implements IAccountDao {
         */
 
         int id = keyHolder.getKey().intValue();
-        account.setId(id);
-        return account;
+        dummyAccount.setId(id);
+        return dummyAccount;
     }
 
     @Override
-    public Account get(Integer id) {
+    public DummyAccount get(Integer id) {
         try {
             return jdbcTemplate.queryForObject(SELECT_BY_ID, new Object[]{id}, new AccountRowMapper());
         }
@@ -57,7 +57,7 @@ public class AccountDaoImpl extends AbstractDaoImpl implements IAccountDao {
     }
 
     @Override
-    public List<Account> getAllAccounts() {
+    public List<DummyAccount> getAllAccounts() {
         try {
             return jdbcTemplate.query(SELECT_ALL, new AccountRowMapper());
         }
@@ -68,8 +68,8 @@ public class AccountDaoImpl extends AbstractDaoImpl implements IAccountDao {
     }
 
     @Override
-    public int update(Account account) {
-        return jdbcTemplate.update(UPDATE_ACCOUNT_NAME, new Object[]{account.getAccountName(), account.getId()});
+    public int update(DummyAccount dummyAccount) {
+        return jdbcTemplate.update(UPDATE_ACCOUNT_NAME, new Object[]{dummyAccount.getAccountName(), dummyAccount.getId()});
     }
 
     @Override
