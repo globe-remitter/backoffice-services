@@ -1,4 +1,4 @@
-package com.gr.backoffice.common.entity.common;
+package com.gr.backoffice.common.entity.core;
 
 public class Currency {
     private long id;

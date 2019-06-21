@@ -1,9 +1,9 @@
 package com.gr.backoffice.common.entity.abs;
 
 import com.gr.backoffice.common.entity.enums.AddressType;
-import com.gr.backoffice.common.entity.common.City;
-import com.gr.backoffice.common.entity.common.Country;
-import com.gr.backoffice.common.entity.common.State;
+import com.gr.backoffice.common.entity.core.City;
+import com.gr.backoffice.common.entity.core.Country;
+import com.gr.backoffice.common.entity.core.State;
 
 public abstract class Address implements Comparable<Address> {
     private String owner;
