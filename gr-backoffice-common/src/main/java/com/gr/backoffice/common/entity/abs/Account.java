@@ -1,7 +1,6 @@
 package com.gr.backoffice.common.entity.abs;
 
-import com.gr.backoffice.common.entity.common.Currency;
-import com.gr.backoffice.common.entity.common.Product;
+import com.gr.backoffice.common.entity.core.Currency;
 import com.gr.backoffice.common.entity.enums.AccountType;
 
 public class Account<T> {

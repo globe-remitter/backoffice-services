@@ -1,6 +1,6 @@
 package com.gr.backoffice.common.entity.abs;
 
-import com.gr.backoffice.common.entity.common.Country;
+import com.gr.backoffice.common.entity.core.Country;
 import com.gr.backoffice.common.entity.enums.CustomerType;
 
 import java.util.Date;

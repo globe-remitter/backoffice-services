@@ -1,8 +1,8 @@
 package com.gr.backoffice.common.entity;
 
 import com.gr.backoffice.common.entity.abs.Organization;
-import com.gr.backoffice.common.entity.common.Currency;
-import com.gr.backoffice.common.entity.common.Product;
+import com.gr.backoffice.common.entity.core.Currency;
+import com.gr.backoffice.common.entity.abs.Product;
 import com.gr.backoffice.common.entity.enums.AccountType;
 
 public class DummyAccount {

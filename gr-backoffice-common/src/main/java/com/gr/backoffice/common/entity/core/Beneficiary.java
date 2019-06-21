@@ -1,4 +1,4 @@
-package com.gr.backoffice.common.entity.common;
+package com.gr.backoffice.common.entity.core;
 
 import com.gr.backoffice.common.entity.abs.Account;
 import com.gr.backoffice.common.entity.abs.Address;
